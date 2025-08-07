@@ -1,0 +1,10 @@
+{
+    "dotrush.roslyn.projectOrSolutionFiles": [
+        "d:\\UnityProjects\\Unity-MetaXR-AI-Florence\\Unity-MetaXR-AI-Florence.sln",
+        "d:\\UnityProjects\\Unity-MetaXR-AI-Florence\\Meta.XR.EnvironmentDepth.csproj",
+        "d:\\UnityProjects\\Unity-MetaXR-AI-Florence\\Meta.XR.EnvironmentDepth.Editor.csproj",
+        "d:\\UnityProjects\\Unity-MetaXR-AI-Florence\\meta.xr.mrutilitykit.csproj",
+        "d:\\UnityProjects\\Unity-MetaXR-AI-Florence\\meta.xr.mrutilitykit.editor.csproj",
+        "d:\\UnityProjects\\Unity-MetaXR-AI-Florence\\meta.xr.mrutilitykit.tests.csproj"
+    ]
+}
