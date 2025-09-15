@@ -195,6 +195,11 @@ namespace PresentFutures.XRAI.Florence
             StartCoroutine(SendApiRequest());
         } 
         
+        
+        //************************** custom add here ******************************/
+        [Header("Packing Note")]
+        [SerializeField] private AddDetectedItemButtonsToUI addDetectedItemButtonsToUI;
+        
         // It prepares the data and then calls our new async method.
         private IEnumerator SendApiRequest()
         {
@@ -464,6 +469,7 @@ namespace PresentFutures.XRAI.Florence
 
         private IEnumerator SpawnDetectionVisuals()
         {
+            
             if (boundingBoxContainer == null)
             {
                 Debug.LogWarning("No boundingBoxContainer assigned – falling back to OnGUI drawing.");
@@ -523,14 +529,23 @@ namespace PresentFutures.XRAI.Florence
                             Quaternion.LookRotation(hitInfo.normal, Vector3.up));
                         _spawnedAnchors.Add(anchorGo);
                         anchorGo.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = det.Label;
+                        
+                        //Add detected item in packing note UI - NEW **********************************************
+                        addDetectedItemButtonsToUI.AddItemButton(det.Label);
                     }
                 }
+                
+                
+                
 
                 yield return new WaitForSeconds(0.1f);
             }
         }
         #endregion
-
+        
+        
+        
+        
         //Clear all created anchors
         private void ClearAnchors()
         {
